@@ -16,6 +16,7 @@ public class SpringFoxConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.any())
+                .apis(RequestHandlerSelectors.basePackage("com.example.studentmanage.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }

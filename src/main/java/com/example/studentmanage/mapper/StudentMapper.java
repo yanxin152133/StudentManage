@@ -6,11 +6,11 @@ import java.util.List;
 
 public interface StudentMapper {
 
-    List<Student> SelectAll();
+    List<Student> selectAll();
 
-    int updateStudentById(int student);
-
-    int insertStudentById(int student);
-
-    int deleteStudentbyId(int id);
+    //int updateStudentById(int student);
+    //
+    //int insertStudent(int student);
+    //
+    //int deleteStudentbyId(int id);
 }

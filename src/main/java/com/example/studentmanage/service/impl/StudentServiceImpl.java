@@ -8,29 +8,15 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
 @Service
 public class StudentServiceImpl implements StudentService {
     @Autowired
-    StudentMapper studentMapper;
+    private StudentMapper studentMapper;
 
     @Override
     public List<Student> selectAll() {
-        return studentMapper.SelectAll();
-    }
-
-    @Override
-    public int updateStudentById(Student student) {
-        return 0;
-    }
-
-    @Override
-    public int insertStudentById(Student student) {
-        return 0;
-    }
-
-
-    @Override
-    public int deleteStudentbyId(int id) {
-        return studentMapper.deleteStudentbyId(id);
+        List<Student> studentList = studentMapper.selectAll();
+        return studentList;
     }
 }
