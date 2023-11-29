@@ -7,7 +7,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @SpringBootApplication
 @EnableWebMvc
-@MapperScan("com.example.studentmanage.dao")
+@MapperScan("com.example.studentmanage.mapper")
 public class StudentManageApplication {
 
     public static void main(String[] args) {

@@ -1,13 +1,10 @@
 package com.example.studentmanage.controller;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.example.studentmanage.model.Student;
-import com.example.studentmanage.service.StuService;
 import com.example.studentmanage.utils.RedisUtils;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
