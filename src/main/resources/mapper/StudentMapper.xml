@@ -7,12 +7,12 @@
     <resultMap id="BaseResultMap" type="com.example.studentmanage.model.Student">
         <id property="id" column="id" jdbcType="INTEGER"/>
         <result property="studentName" column="studentName" jdbcType="VARCHAR"/>
-        <result property="studentSex" column="studentSex" jdbcType="INTEGER"/>
+        <result property="studentSex" column="studentSex" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="Base_Column_List">
         id
-        ,stuName,stuSex
+        ,studentName,studentSex
     </sql>
     <!--<insert id="insertStudent"></insert>-->
     <!--<update id="updateStudentById"></update>-->
@@ -45,7 +45,7 @@
 
 
     <select id="selectAll" resultType="com.example.studentmanage.model.Student">
-        select id, studentName, case studentSex when '1' then '男' else '女' end
+        select id, studentName, studentSex
         from student;
     </select>
 
