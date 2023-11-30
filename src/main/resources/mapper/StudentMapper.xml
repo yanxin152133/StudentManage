@@ -7,13 +7,14 @@
     <resultMap id="BaseResultMap" type="com.example.studentmanage.model.Student">
         <id property="id" column="id" jdbcType="INTEGER"/>
         <result property="studentName" column="studentName" jdbcType="VARCHAR"/>
-        <result property="studentSex" column="studentSex" jdbcType="INTEGER"/>
+        <result property="studentSex" column="studentSex" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="Base_Column_List">
         id
-        ,stuName,stuSex
+        ,studentName,studentSex
     </sql>
+
     <!--<insert id="insertStudent"></insert>-->
     <!--<update id="updateStudentById"></update>-->
     <!--<delete id="deleteStudentbyId"></delete>-->
@@ -45,8 +46,28 @@
 
 
     <select id="selectAll" resultType="com.example.studentmanage.model.Student">
-        select id, studentName, case studentSex when '1' then '男' else '女' end
+        select id, studentName, studentSex
         from student;
     </select>
+
+    <insert id="insertStudent">
+        insert into student (id, studentName, studentSex)
+        values (#{id}, #{studentName}, #{studentSex})
+    </insert>
+
+    <update id="updateStudentById">
+        update student
+        <set>
+            <if test="studentName!=null">studentName=#{studentName},</if>
+            <if test="studentSex!=null">studentSex=#{studentSex}</if>
+        </set>
+        where id =#{id}
+    </update>
+
+    <delete id="deleteStudentbyId">
+        delete
+        from student
+        where id = #{id}
+    </delete>
 
 </mapper>

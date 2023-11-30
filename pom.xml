@@ -72,9 +72,11 @@
             <artifactId>druid</artifactId>
             <version>1.1.23</version>
         </dependency>
+
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>2.0.31</version>
         </dependency>
 
     </dependencies>

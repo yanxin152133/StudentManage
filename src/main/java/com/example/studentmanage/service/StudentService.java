@@ -9,4 +9,10 @@ import java.util.List;
 public interface StudentService {
     List<Student> selectAll();
 
+    void updateStudentById(Student student);
+
+    void insertStudent(Student student);
+
+    void deleteStudentById(int id);
+
 }

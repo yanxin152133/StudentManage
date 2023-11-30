@@ -25,4 +25,37 @@ public class StudentController {
         return studentService.selectAll();
     }
 
+    @ApiOperation(value = "添加学生信息", notes = "添加学生信息")
+    @GetMapping("insetStudent")
+    public void insetStudent(Student student) {
+        try {
+            studentService.insertStudent(student);
+            System.out.printf("添加学生信息成功\n");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @ApiOperation(value = "更新学生信息", notes = "更新学生信息")
+    @GetMapping("updateStudent")
+    public void updateStudentById(Student student) {
+        try {
+            studentService.updateStudentById(student);
+            System.out.printf("更新学生信息成功\n");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @ApiOperation(value = "删除学生信息", notes = "删除学生信息")
+    @GetMapping("deleteStudent")
+    public void deleteStudentById(int id) {
+        try {
+            studentService.deleteStudentById(id);
+            System.out.printf("删除学生信息成功\n");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }
