@@ -4,7 +4,8 @@ package com.example.studentmanage.model;
 public class Student {
     private int id;
     private String studentName;
-    private int studentSex;
+    private String studentSex;
+
 
     public int getId() {
         return id;
@@ -22,20 +23,16 @@ public class Student {
         this.studentName = studentName;
     }
 
-    public int getStudentSex() {
+    public String getStudentSex() {
         return studentSex;
     }
 
-    public void setStudentSex(int studentSex) {
+    public void setStudentSex(String studentSex) {
         this.studentSex = studentSex;
     }
 
     @Override
     public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", studentName='" + studentName + '\'' +
-                ", studentSex=" + studentSex +
-                '}';
+        return "Student{" + "id=" + id + ", studentName='" + studentName + '\'' + ", studentSex=" + studentSex + '}';
     }
 }
