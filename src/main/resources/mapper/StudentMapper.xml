@@ -15,36 +15,6 @@
         ,studentName,studentSex
     </sql>
 
-    <!--<insert id="insertStudent"></insert>-->
-    <!--<update id="updateStudentById"></update>-->
-    <!--<delete id="deleteStudentbyId"></delete>-->
-
-
-    <!--&lt;!&ndash;根据id更改用户信息&ndash;&gt;-->
-    <!--<update id="update">-->
-    <!--    update user-->
-    <!--    <set >-->
-    <!--        <if test="userName != null" >-->
-    <!--            userName = #{userName,jdbcType=VARCHAR},-->
-    <!--        </if>-->
-    <!--        <if test="passWord != null" >-->
-    <!--            passWord = #{passWord,jdbcType=VARCHAR},-->
-    <!--        </if>-->
-    <!--        <if test="realName != null" >-->
-    <!--            realName = #{realName,jdbcType=VARCHAR},-->
-    <!--        </if>-->
-    <!--    </set>-->
-    <!--    where id = #{id,jdbcType=INTEGER}-->
-    <!--</update>-->
-    <!--<update id="updateStudentById"></update>-->
-
-
-    <!--&lt;!&ndash;删除用户信息&ndash;&gt;-->
-    <!--<delete id="deleteById">-->
-    <!--    delete from user where id=#{id}-->
-    <!--</delete>-->
-
-
     <select id="selectAll" resultType="com.example.studentmanage.model.Student">
         select id, studentName, studentSex
         from student;
